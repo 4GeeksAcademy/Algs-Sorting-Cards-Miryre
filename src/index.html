@@ -15,19 +15,31 @@
     />
   </head>
   <body>
-    <!-- Write your HTML code here, you can delete everything withing the body tags -->
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./assets/img/rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
-      </div>
+   <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Sorter by Elysa</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h4>Original:</h4>
+    <div class="input-col-4">
+      <input type="number" id="cardCount" placeholder="4-13 cards" />
+      <button id="drawBtn">Draw</button>
+      <button id="sortBtn">Sort</button>
     </div>
+
+    <div id="deck" class="deck-grid"></div>
+
+    <h4>Bubble Log:</h4>
+    <div id="sort-log"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
 
     <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
     <script type="module" src="/app.js"></script>

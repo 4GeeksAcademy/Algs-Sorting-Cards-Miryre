@@ -1,5 +1,108 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
-body{
-    background: white;
+/* General page styling */
+body {
+  background: green;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* Input and button styling */
+.input-col-4 {
+  margin-bottom: 20px;
+}
+
+input[type="number"] {
+  width: 80px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 5px 10px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 4px;
+  background-color: #444;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #666;
+}
+
+/* Card styling */
+.plcard {
+  width: 60px;
+  height: 90px;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+  position: relative;
+  background: white;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+.suit-top {
+  position: absolute;
+  font-size: 18px;
+  top: 5px;
+  left: 5px;
+}
+
+.suit-bttm {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 18px;
+}
+
+.numberr {
+  font-size: 20px;
+  margin-top: 25px;
+  justify-content: center;
+  display: flex;
+  font-weight: bold;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.red {
+  color: red;
+}
+
+.black {
+  color: black;
+}
+
+.deck-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#sort-log {
+  margin-top: 50px;
+  border-top: rgb(11, 72, 34) 2px solid;
+  padding-top: 10px;
+}
+
+.sorted-row {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.sorted-row strong {
+  margin-right: 10px;
+  font-weight: bold;
+  color: #fff;
 }
