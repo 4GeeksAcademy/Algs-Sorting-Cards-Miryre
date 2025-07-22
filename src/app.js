@@ -1,7 +1,6 @@
 import "bootstrap";
 import "./style.css";
 
-
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
@@ -67,18 +66,22 @@ window.onload = function () {
     document.getElementById("sort-log").innerHTML = "";
   }
 
-  function bubbleSort(cards) {
+  function selectionSort(cards) {
     const log = document.getElementById("sort-log");
     let arr = [...cards];
     let len = arr.length;
     let sortedSteps = [];
 
     for (let i = 0; i < len; i++) {
-      for (let j = 0; j < len - 1; j++) {
-        if (arr[j].numeric > arr[j + 1].numeric) {
-          [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
-          sortedSteps.push([...arr]);
+      let minIndex = i;
+      for (let j = i + 1; j < len; j++) {
+        if (arr[j].numeric < arr[minIndex].numeric) {
+          minIndex = j;
         }
+      }
+      if (minIndex !== i) {
+        [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
+        sortedSteps.push([...arr]);
       }
     }
 
@@ -105,5 +108,5 @@ window.onload = function () {
   }
 
   document.getElementById("drawBtn").addEventListener("click", generateRandomDeck);
-  document.getElementById("sortBtn").addEventListener("click", () => bubbleSort(drawnCards));
+  document.getElementById("sortBtn").addEventListener("click", () => selectionSort(drawnCards));
 };
